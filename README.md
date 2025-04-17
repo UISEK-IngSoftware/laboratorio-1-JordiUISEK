@@ -11,11 +11,12 @@ El presente laboratorio tiene como obejtivo introducir al estudiante al desarrol
 
 El proyecto debe contener al menos los siguientes archivos:
 
+```
 /laboratorio-1/ <br>
   ├── index.html <br>
   ├── estilos.css <br>
   └── README.md <br>
-
+```
 
 ---
 
