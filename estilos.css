@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: clamp(12px, 1.2vw, 14px);
+}
+
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333;
     background: #f9f9f9;
     padding: 20px;
+    font-size: 1rem; /* 1rem = base responsivo */
 }
 
 a {
@@ -21,14 +26,14 @@ a:hover {
     text-decoration: underline;
 }
 
-div.avatar {
-    border-radius: 50% 50%;
-    width: 150px;
-    height: 150px;
+.avatar {
+    border-radius: 50%;
+    width: clamp(100px, 15vw, 150px);
+    height: clamp(100px, 15vw, 150px);
     background-image: url(img.png);
-    background-position: center center;
+    background-position: center;
     background-size: cover;
-    display: inline-block;
+    margin: 10px auto;
 }
 
 .headers {
@@ -37,12 +42,12 @@ div.avatar {
 }
 
 .headers h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 5px;
 }
 
 .subtitulo {
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.2rem);
     color: #555;
 }
 
@@ -54,14 +59,30 @@ div.avatar {
 .contacto li {
     display: inline-block;
     margin: 0 10px;
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+main {
+    margin: 10px auto;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 1px 2px 5px #989898;
+    padding: 5px;
+    border-radius: 10px;
+    min-width: 300px;
+    width: auto;
 }
 
 section {
-    margin-bottom: 30px;
+    position: relative;
+    max-width: 1200px;
+    width: 90%;
+    min-width: 300px;
+    margin: 30px auto;
 }
 
 h2 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
     border-bottom: 2px solid #0066cc;
     padding-bottom: 5px;
     margin-bottom: 15px;
@@ -77,15 +98,17 @@ h2 {
 }
 
 .puesto h3 {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     margin-bottom: 5px;
 }
 
 .puesto ul {
     padding: 0 15px 15px 20px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .meta {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     color: #777;
     margin-bottom: 10px;
 }
@@ -100,11 +123,13 @@ h2 {
     margin-bottom: 10px;
     border-left: 4px solid #0066cc;
     border-radius: 4px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .idiomas {
     width: 100%;
     border-collapse: collapse;
+    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
 }
 
 .idiomas th,
@@ -119,13 +144,9 @@ h2 {
     color: #fff;
 }
 
-.idiomas tbody {
-    background-color: white;
-}
-
 footer {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     color: #555;
     margin-top: 40px;
 }
